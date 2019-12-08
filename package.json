@@ -1,6 +1,6 @@
 {
-  "name": "example",
-  "version": "1.0.0",
+  "name": "rd-template-react-mobx",
+  "version": "0.0.1",
   "description": "",
   "main": "config.js",
   "scripts": {
