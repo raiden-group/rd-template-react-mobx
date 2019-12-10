@@ -1,4 +1,13 @@
 module.exports = {
+  server: [
+    [
+      'server',
+      {
+        root: './build',
+        port: 4004
+      }
+    ]
+  ],
   dev: [
     [
       'webpack4',
@@ -7,8 +16,8 @@ module.exports = {
         env: 'development',
         template: "./index.html",
         watch: true,
-        cssModules: false, // css 模块化时不支持 通过less 方式的主题替换
-        autoOpen: false, 
+        cssModules: true, // css 模块化时不支持 通过less 方式的主题替换
+        autoOpen: true, 
         modifyVars: {  // 配置less 变量，常用于 库主题替换
           'primary-color': '#1DA57A',
         },
@@ -19,7 +28,7 @@ module.exports = {
           js: 'js',
           font: 'font'
         },
-        isMobile: true,
+        isMobile: false,
         port: 8888,
       }
     ]
@@ -28,7 +37,6 @@ module.exports = {
     [
       'webpack4',
       {
-        __path__: '../lib/index.js',
         entry: "./src/index.js",
         env: 'production',
         output: './build',
