@@ -1,35 +1,20 @@
 module.exports = {
-  server: [
-    [
-      'server',
-      {
-        root: './build',
-        port: 4004
-      }
-    ]
-  ],
   dev: [
     [
       'webpack4',
       {
         entry: "./src/index.js",
-        env: 'development',
-        template: "./index.html",
-        watch: true,
+        template: "./src/assets/index.html",
         cssModules: true, // css 模块化时不支持 通过less 方式的主题替换
-        autoOpen: true, 
+        devtool: true, // 是否开启调试
+        chunks: true, 
+        isMobile: false, // 是否是移动端，移动端自动开启 px2vw 转换
+        watch: true, //
+        autoOpen: true, // 本地开发是否自动在浏览器中打开
+        port: 8888, // 本地服务端口
         modifyVars: {  // 配置less 变量，常用于 库主题替换
           'primary-color': '#1DA57A',
-        },
-        devtool: true,
-        chunks: true,
-        folders: {
-          css: 'css',
-          js: 'js',
-          font: 'font'
-        },
-        isMobile: false,
-        port: 8888,
+        }
       }
     ]
   ],
@@ -38,12 +23,10 @@ module.exports = {
       'webpack4',
       {
         entry: "./src/index.js",
-        env: 'production',
         output: './build',
-        template: './index.html',
-        // chunks: false,
+        template: '.src/assets/index.html',
+        chunks: true,
         isMobile: true,
-        watch: false,
         analyze: false,  // 启动打包文件分析
         transform: false,
         folders: {
@@ -51,7 +34,6 @@ module.exports = {
           js: 'js',
           font: 'font'
         },
-        common: true,
         modifyVars: {  // 配置less 变量，常用于 库主题替换
           'primary-color': '#1DA57A',
         },

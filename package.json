@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "babel-preset-es2015": "^6.24.1",
     "rd-mid-server": "0.0.1",
     "rd-mid-webpack4": "0.0.6"
   }

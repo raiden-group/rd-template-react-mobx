@@ -8,7 +8,7 @@ module.exports = async function(ctx, webpackConfig) {
     components: path.resolve(__dirname, './src/components'),
     static:path.resolve(__dirname, './src/static'),
     utils: path.resolve(__dirname, './src/common/utils'),
-    container: path.resolve(__dirname, './src/container'),
+    view: path.resolve(__dirname, './src/view'),
     styles: path.resolve(__dirname, './src/common/styles'),
     stores: path.resolve(__dirname, './src/stores')
   }

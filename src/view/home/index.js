@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { observer, inject} from "mobx-react";
 import { Button, Input } from 'antd';
 import './index.less';
+import styles from './index.less';
+
 @inject('homeStore')
 @observer
 export default class Home extends Component {
@@ -10,7 +12,7 @@ export default class Home extends Component {
   }
   render() {
     const { name } = this.Store;
-    return <div className='home-wrap'>
+    return <div className={styles['home-wrap']}>
       <Input value={name} onChange={(e) => {
         this.Store.setName(e.target.value)
       }}/>
