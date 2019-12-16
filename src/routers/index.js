@@ -2,7 +2,7 @@ import React from "react";
 import { Route, HashRouter, Redirect, Switch } from 'react-router-dom';
 import AsyncLoad from 'components/asyncLoad';
 
-const Home = AsyncLoad(() => import('view/home'));
+const Home = AsyncLoad(() => import(/* webpackChunkName: "home" */ 'view/home'));
 
 class Routers extends React.Component {
     render() {

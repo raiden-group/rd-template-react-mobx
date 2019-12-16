@@ -3,8 +3,5 @@ module.exports = {
     [
       "import", { "libraryName": "antd", "style": true }
     ],
-    [
-      "transform-decorators-legacy"
-    ]
   ]
 }
