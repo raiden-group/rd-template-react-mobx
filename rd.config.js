@@ -3,7 +3,6 @@ module.exports = {
     [
       'webpack4',
       {
-        // __path__: '../rd-mid-webpack4/lib/index.js',
         entry: "./src/index.js",
         template: "./src/assets/index.html",
         cssModules: true, // css 模块化时不支持 通过less 方式的主题替换
@@ -22,7 +21,6 @@ module.exports = {
     [
       'webpack4',
       {
-        // __path__: '../rd-mid-webpack4/lib/index.js',
         entry: "./src/index.js",
         output: './build',
         template: './src/assets/index.html',

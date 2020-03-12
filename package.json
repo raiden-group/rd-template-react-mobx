@@ -1,6 +1,6 @@
 {
   "name": "rd-template-react-mobx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "config.js",
   "scripts": {
@@ -21,6 +21,6 @@
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "rd-mid-webpack4": "0.0.10"
+    "rd-mid-webpack4": "^0.0.12"
   }
 }
